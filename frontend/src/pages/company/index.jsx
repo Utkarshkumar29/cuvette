@@ -44,7 +44,7 @@ const CompanyDashboard=()=>{
         }
 
         try {
-            const response = await axios.post('/api/jobs', jobData)
+            const response = await axios.post('https://cuvette-hoib.onrender.com/api/jobs', jobData)
             console.log(response.data)
             if(response.data==200){
                 setJobTitle("")
@@ -62,7 +62,7 @@ const CompanyDashboard=()=>{
     const token = localStorage.getItem('token')
     const getAllJobPosting=async()=>{
         try {
-            const response = await axios.get('http://localhost:5000/api/jobs', {
+            const response = await axios.get('https://cuvette-hoib.onrender.com/api/jobs', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },

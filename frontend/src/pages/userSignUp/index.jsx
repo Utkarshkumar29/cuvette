@@ -32,7 +32,7 @@ const UserSignUp = () => {
                 email,
                 password
             }            
-            const response=await axios.post('http://localhost:5000/api/user/register',data)
+            const response=await axios.post('https://cuvette-hoib.onrender.com/api/user/register',data)
             console.log(response)
             if(response.status==201){
               setIsLoggedIn(true)
@@ -51,7 +51,7 @@ const UserSignUp = () => {
               email,
               password
           }            
-          const response=await axios.post('http://localhost:5000/api/user/login',data)
+          const response=await axios.post('https://cuvette-hoib.onrender.com/api/user/login',data)
           console.log(response)
           if(response.status==200){
             setIsLoggedIn(true)

@@ -16,7 +16,7 @@ const Feed=()=>{
 
     const getAllJobPosting = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/jobs', {
+            const response = await axios.get('https://cuvette-hoib.onrender.com/api/jobs', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },

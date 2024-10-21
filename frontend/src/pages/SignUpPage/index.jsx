@@ -42,7 +42,7 @@ const SignUp = () => {
                 companyEmail,
                 employeeSize
             }            
-            const response=await axios.post('http://localhost:5000/api/signUp',data)
+            const response=await axios.post('https://cuvette-hoib.onrender.com/api/signUp',data)
             console.log(response)
             if(response.status==201){
                 setVerifying(true)
@@ -64,7 +64,7 @@ const SignUp = () => {
                 companyId,
                 emailOTP
             }            
-            const response=await axios.post('http://localhost:5000/api/signUp/verify-email',data)
+            const response=await axios.post('https://cuvette-hoib.onrender.com/api/signUp/verify-email',data)
             if(response.status==200){
                 setIsEmailVerified(true)
                 toast(response.message) 
@@ -81,7 +81,7 @@ const SignUp = () => {
                 companyId,
                 phoneOTP
             }            
-            const response=await axios.post('http://localhost:5000/api/signUp/verify-phone',data)
+            const response=await axios.post('https://cuvette-hoib.onrender.com/api/signUp/verify-phone',data)
             if(response.status==200){
                 setIsPhoneVerified(true)
                 toast(response.message) 
